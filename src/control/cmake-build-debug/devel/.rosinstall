@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lucas/Dropbox/ros_reorg/temp_ws/src/control/cmake-build-debug/devel/setup.sh

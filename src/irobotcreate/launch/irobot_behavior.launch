@@ -1,0 +1,27 @@
+<launch>
+    <env name="GAZEBO_MODEL_PATH" value="$(find irobotcreate)/models/"/>
+    <arg name="id" default="0"/>
+    <arg name="base_name" default="iRobot_"/>
+
+    <!-- load an empty gazebo world with standard physics -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find irobotcreate)/worlds/irobot_maze.world"/>
+    </include>
+
+    <!-- -z to raise the robot in the air since it starts on top of cubes -->
+    <node name="spawn_model"
+        pkg="gazebo_ros"
+        type="spawn_model"
+        args="-file $(find irobotcreate)/models/irobot/model_full.sdf -sdf -model iRobot -x 1 -y 1 -z 0"
+        ns="$(arg base_name)$(arg id)"/>
+
+    <node name="irobot_sensor_transform" pkg="irobotcreate" type="irobot_sensor_transform" ns="$(arg base_name)$(arg id)" />
+    <node name="irobot_gps_to_zero_translate" pkg="irobotcreate" type="irobot_gps_to_zero_translate" ns="$(arg base_name)$(arg id)" />
+
+    <!-- load behaviors -->
+    <node name="bh_wander" pkg="control" type="bh_wander" ns="$(arg base_name)$(arg id)" />
+    <!-- node name="bh_avoid" pkg="control" type="bh_avoid" ns="$(arg base_name)$(arg id)"  -->
+    <node name="bh_arbiter" pkg="control" type="bh_arbiter" ns="$(arg base_name)$(arg id)" />
+
+
+</launch>

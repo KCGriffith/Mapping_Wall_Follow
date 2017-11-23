@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o  -o ../devel/lib/serial/serial-test-timer  -L/home/ubuntu/create2driver_ws/serial/src/build/gtest -rdynamic ../gtest/libgtest.so ../devel/lib/libserial.so -lpthread -lrt -lpthread -Wl,-rpath,/home/ubuntu/create2driver_ws/serial/src/build/gtest:/home/ubuntu/create2driver_ws/serial/src/build/devel/lib 

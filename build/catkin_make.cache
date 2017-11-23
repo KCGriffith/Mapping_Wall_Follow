@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/keaton/Mapping_Wall_Follow/devel -DCMAKE_INSTALL_PREFIX=/home/keaton/Mapping_Wall_Follow/install -G Unix Makefiles

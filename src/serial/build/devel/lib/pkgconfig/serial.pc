@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/create2driver_ws/serial/src/build/devel
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/ubuntu/create2driver_ws/serial/src/include
+Libs: -L/home/ubuntu/create2driver_ws/serial/src/build/devel/lib -lserial
+Requires: 

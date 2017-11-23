@@ -1,0 +1,8 @@
+prefix=/home/lucas/Dropbox/ros_reorg/irobot_updated_ws/src/irobotcreate/cmake-build-debug/devel
+
+Name: irobotcreate
+Description: Description of irobotcreate
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lucas/Dropbox/ros_reorg/irobot_updated_ws/src/irobotcreate/cmake-build-debug/devel/lib 
+Requires: 

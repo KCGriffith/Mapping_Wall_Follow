@@ -1,0 +1,13 @@
+/usr/local/share/_setup_util.py
+/usr/local/share/env.sh
+/usr/local/share/setup.bash
+/usr/local/share/setup.sh
+/usr/local/share/setup.zsh
+/usr/local/share/.rosinstall
+/usr/local/share/lib/pkgconfig/serial.pc
+/usr/local/share/share/serial/cmake/serialConfig.cmake
+/usr/local/share/share/serial/cmake/serialConfig-version.cmake
+/usr/local/share/share/serial/package.xml
+/usr/local/share/lib/libserial.so
+/usr/local/share/include/serial/serial.h
+/usr/local/share/include/serial/v8stdint.h

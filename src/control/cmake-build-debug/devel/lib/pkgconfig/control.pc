@@ -1,0 +1,8 @@
+prefix=/home/lucas/Dropbox/ros_reorg/temp_ws/src/control/cmake-build-debug/devel
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: -I/home/lucas/Dropbox/ros_reorg/temp_ws/src/control/cmake-build-debug/devel/include -I/home/lucas/Dropbox/ros_reorg/temp_ws/src/control/include
+Libs: -L/home/lucas/Dropbox/ros_reorg/temp_ws/src/control/cmake-build-debug/devel/lib 
+Requires: message_runtime

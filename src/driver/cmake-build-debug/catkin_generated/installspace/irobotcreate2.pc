@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: irobotcreate2
+Description: Description of irobotcreate2
+Version: 0.0.1
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: 

@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<robot name="iRobotCreate">
+
+  <joint name="left_wheel" type="fixed">
+    <parent link="irobot_base"/>
+    <child link="left_wheel"/>
+    <origin rpy="0  0  0" xyz="0     0.13   0.032"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+
+  <joint name="right_wheel" type="fixed">
+    <parent link="irobot_base"/>
+    <child link="right_wheel"/>
+    <origin rpy="0  0  0" xyz="0    -0.13   0.032"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+
+  <link name="irobot_base">
+    <inertial>
+      <mass value="2.234000"/>
+      <origin rpy="0  0  0" xyz="0.00145 -0.00045  0.02978"/>
+      <inertia ixx="0.058640" ixy="0.000124" ixz="0.000615" iyy="0.058786" iyz="0.000014" izz="1.532440"/>
+    </inertial>
+    <collision name="irobot_base_collision">
+      <origin rpy="0  0  0" xyz="0      0      0.0478"/>
+      <geometry>
+        <cylinder length="0.061163" radius="0.166495"/>
+      </geometry>
+    </collision>
+    <visual name="irobot_base_visual">
+      <origin rpy="0  0  0" xyz="0      0      0.0478"/>
+      <geometry>
+        <mesh filename="package://irobotcreate/models/irobot/meshes/create_body.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="left_wheel">
+    <inertial>
+      <mass value="0.010000"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.001000" ixy="0" ixz="0" iyy="0.001000" iyz="0" izz="0.001000"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0      1.5707  1.5707" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.023000" radius="0.033000"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0      1.5707  1.5707" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.023000" radius="0.033000"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="right_wheel">
+    <inertial>
+      <mass value="0.010000"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.001000" ixy="0" ixz="0" iyy="0.001000" iyz="0" izz="0.001000"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0      1.5707  1.5707" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.023000" radius="0.033000"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0      1.5707  1.5707" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.023000" radius="0.033000"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>

@@ -1,0 +1,8 @@
+prefix=/usr/local/share
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/usr/local/share/include
+Libs: -L/usr/local/share/lib -lserial
+Requires: 

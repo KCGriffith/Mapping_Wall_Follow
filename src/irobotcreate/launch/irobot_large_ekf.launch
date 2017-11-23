@@ -1,0 +1,40 @@
+<launch>
+    <env name="GAZEBO_MODEL_PATH" value="$(find irobotcreate)/models/"/>
+    <arg name="id" default="0"/>
+    <arg name="base_name" default="iRobot_"/>
+
+    <!-- load an empty gazebo world with standard physics -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find irobotcreate)/worlds/irobot_maze.world"/>
+    </include>
+
+    <!-- -z to raise the robot in the air since it starts on top of cubes -->
+    <node name="spawn_model"
+        pkg="gazebo_ros"
+        type="spawn_model"
+        args="-file $(find irobotcreate)/models/irobot/model_full.sdf -sdf -model iRobot -x 0 -y 0 -z 1"
+        ns="$(arg base_name)$(arg id)"/>
+
+    <node name="irobot_sensor_transform" pkg="irobotcreate" type="irobot_sensor_transform" ns="$(arg base_name)$(arg id)" />
+    <node name="irobot_gps_to_zero_translate" pkg="irobotcreate" type="irobot_gps_to_zero_translate" ns="$(arg base_name)$(arg id)" />
+
+     <!-- Note: EKF seems to need to start from x=0, y=0 to be accurate. Look into this. -->
+     <!-- EKF for absolute localization (clearpath) -->
+     <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" output="screen">
+         <param name="base_footprint_frame" value="base_link"/>
+         <remap from="odom" to="/iRobot_0/odom"/>
+         <remap from="imu_data" to="/iRobot_0/imu_data"/>
+         <remap from="gps" to="/iRobot_0/gps_odom"/>
+         <param name="output_frame" value="odom"/>
+         <param name="freq" value="10.0"/>
+         <param name="sensor_timeout" value="1.0"/>
+         <param name="odom_used" value="true"/>
+         <param name="imu_used" value="true"/>
+         <param name="imu_absolute" value="true"/>
+         <param name="vo_used" value="false"/>
+         <param name="gps_used" value="true"/>
+         <param name="debug" value="false"/>
+         <param name="self_diagnose" value="false"/>
+     </node>
+
+</launch>
