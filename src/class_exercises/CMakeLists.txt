@@ -187,11 +187,11 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-#add_executable(ex1_blank_node src/ex1_blank_node.cpp)
-#target_link_libraries(ex1_blank_node ${catkin_LIBRARIES})
+add_executable(ex1_blank_node src/ex1_blank_node.cpp)
+target_link_libraries(ex1_blank_node ${catkin_LIBRARIES})
 
-#add_executable(ex2_topics src/ex2_topics.cpp)
-#target_link_libraries(ex2_topics ${catkin_LIBRARIES})
+add_executable(ex2_topics src/ex2_topics.cpp)
+target_link_libraries(ex2_topics ${catkin_LIBRARIES})
 
 #add_executable(ex3_msg src/ex3_msg.cpp)
 #target_link_libraries(ex3_msg ${catkin_LIBRARIES})

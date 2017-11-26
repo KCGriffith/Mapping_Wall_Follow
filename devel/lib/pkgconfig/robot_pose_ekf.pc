@@ -1,0 +1,8 @@
+prefix=/home/keaton/Mapping_Wall_Follow/devel
+
+Name: robot_pose_ekf
+Description: Description of robot_pose_ekf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/keaton/Mapping_Wall_Follow/devel/lib 
+Requires: 

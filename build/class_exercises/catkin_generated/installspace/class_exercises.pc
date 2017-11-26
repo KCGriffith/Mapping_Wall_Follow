@@ -1,0 +1,8 @@
+prefix=/home/keaton/Mapping_Wall_Follow/install
+
+Name: class_exercises
+Description: Description of class_exercises
+Version: 0.0.0
+Cflags: -I/home/keaton/Mapping_Wall_Follow/install/include
+Libs: -L/home/keaton/Mapping_Wall_Follow/install/lib 
+Requires: message_runtime

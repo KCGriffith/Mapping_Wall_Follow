@@ -1,0 +1,8 @@
+prefix=/home/keaton/Mapping_Wall_Follow/devel
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: -I/home/keaton/Mapping_Wall_Follow/devel/include -I/home/keaton/Mapping_Wall_Follow/src/control/include
+Libs: -L/home/keaton/Mapping_Wall_Follow/devel/lib 
+Requires: message_runtime

@@ -1,0 +1,8 @@
+prefix=/home/keaton/Mapping_Wall_Follow/devel
+
+Name: irobotcreate2
+Description: Description of irobotcreate2
+Version: 0.0.1
+Cflags: -I/home/keaton/Mapping_Wall_Follow/devel/include
+Libs: -L/home/keaton/Mapping_Wall_Follow/devel/lib 
+Requires: 

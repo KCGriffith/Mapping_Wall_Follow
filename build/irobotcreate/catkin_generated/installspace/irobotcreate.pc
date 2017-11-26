@@ -1,0 +1,8 @@
+prefix=/home/keaton/Mapping_Wall_Follow/install
+
+Name: irobotcreate
+Description: Description of irobotcreate
+Version: 0.0.0
+Cflags: -I/home/keaton/Mapping_Wall_Follow/install/include
+Libs: -L/home/keaton/Mapping_Wall_Follow/install/lib 
+Requires: gazebo_ros gazebo_ros

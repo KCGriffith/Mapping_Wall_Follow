@@ -117,6 +117,15 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/keaton/Mapping_Wall_Follow/build/gtest/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/serial/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/control/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/demo_package/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/robot_pose_ekf/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/class_exercises/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/driver/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/odom_mapper/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/slide_code/cmake_install.cmake")
+  INCLUDE("/home/keaton/Mapping_Wall_Follow/build/irobotcreate/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

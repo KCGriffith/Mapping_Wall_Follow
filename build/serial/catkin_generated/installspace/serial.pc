@@ -1,0 +1,8 @@
+prefix=/home/keaton/Mapping_Wall_Follow/install
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/keaton/Mapping_Wall_Follow/install/include
+Libs: -L/home/keaton/Mapping_Wall_Follow/install/lib -lserial
+Requires: 
